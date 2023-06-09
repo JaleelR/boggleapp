@@ -1,0 +1,39 @@
+
+.upperApp {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+
+
+
+
+
+.bogglegame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#table  {
+    table-layout: fixed;
+height: 400px;
+width: 400px;
+text-align: center;
+border-collapse: collapse ;
+
+
+}
+
+#table td {
+    color: black;
+    border: black solid 1px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+

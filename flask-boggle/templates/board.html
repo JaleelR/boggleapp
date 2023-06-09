@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="upperApp" >
+
+<form id="guessform" action="/" type="submit" >
+  <label for="guess">Can you find a word?</label>
+  <input id="guess" type="text" placeholder="take a guess!" name="guess">
+  <button> submit </button>
+</form>
+
+<br>
+ 
+<div class="popup">
+<div id="dialog" title="Popup Message">
+  <p> Yes! You got a word! </p>
+</div>
+
+<div id="dialog2" title="Popup Message 2">
+  <p> Sorry this word is not on board </p>
+</div>
+
+<div id="dialog3" title="Popup Message 3">
+  <p> Sorry this is not a word :( </p>
+</div>
+
+
+</div>
+
+<br>
+
+<div id="scoreContainer" >
+  <h1> Score </h1>
+  <h1 id="score"> </h1>
+</div>
+
+</div>
+
+<div class="bogglegame">
+<table id="table">
+ <tbody>         
+   <tr>
+     {% for row in session["board"] %}    
+  {%for cell in row%} 
+     <td> 
+       {{ cell }} 
+       </td>
+     {% endfor %}
+   </tr>
+      {% endfor %}
+  </tbody>
+
+    </table>
+  </div>
+
+{% endblock %}
